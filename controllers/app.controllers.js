@@ -1,13 +1,16 @@
-const { resolve } = require("path");
-
 exports.homePage = (req, res) => {
-    res.sendFile(resolve("public", "index.html"));
-};
-
-exports.contactPage = (req, res) => {
-    res.sendFile(resolve("public", "contact.html"));
+    res.sendFile(resolve("../views/pages/home"));
 };
 
 exports.servicesPage = (req, res) => {
-    res.sendFile(resolve("public", "services.html"))
+    res.sendFile(resolve("../views/pages/services"))
+};
+
+exports.usersPage = (req, res) => {
+    res.sendFile(resolve("../views/pages/users"))
+    user: "Moi"
+};
+
+exports.contactPage = (req, res) => {
+    res.sendFile(resolve("../views/pages/contact"));
 };

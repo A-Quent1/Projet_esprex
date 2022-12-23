@@ -1,0 +1,21 @@
+extends ../layout
+
+block content 
+  h1 Voila la page des utilisateurs #{user}
+
+  p = "Comment vas-tu ? "+ user
+
+  table 
+    tr 
+      th Prénom 
+      th Nom 
+      th Email
+
+      each user in users 
+        tr(style=("color" + user.color))
+          td= user.prenom 
+          td= user.nom 
+          td= user.email
+
+block script 
+  script(src="/js/users.js")

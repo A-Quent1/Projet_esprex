@@ -1,4 +1,4 @@
-const { users } = require("../database/data.json");
+const { users } = require("../database/data");
 
 exports.getUsers = (req, res) => {
     res.status(200).json({
