@@ -1,5 +1,6 @@
-app.get("/api/users", (req, res) => {
-    const data = require("./database/data.json");
-    res.json({nbUsers: data.users.length,
-    users: data.users});
-});
+const { gerUsers, getUsers } = require("../controllers/api-users-controllers");
+const router = require("express").Router();
+
+route.get("/api/users", getUsers);
+
+module.exports = router;
